@@ -7,7 +7,7 @@ try:
     while True:
         is_frame_read_success, frame = webcam.read()
         grey_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        face_coordinates = trained_face_data.detectMultiScale(frame)
+        face_coordinates = trained_face_data.detectMultiScale(grey_frame)
         print(face_coordinates)
         for coordinate in face_coordinates:
             (x, y, w, h) = coordinate
@@ -17,6 +17,7 @@ try:
 
         # if q is pressed , exit
         if key in (81, 113):
+            webcam.release()
             break
 
 except Exception as e:
