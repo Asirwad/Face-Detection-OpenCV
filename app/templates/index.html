@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Detection with Flask</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        #video-container {
+            max-width: 640px;
+            margin: 0 auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #video-stream {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Detection with Flask</h1>
+    <div id="video-container">
+        <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Video Stream">
+    </div>
+</body>
+</html>
