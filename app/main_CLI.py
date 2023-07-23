@@ -9,17 +9,22 @@ try:
         is_frame_read_success, frame = webcam.read()
         grey_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         face_coordinates = trained_face_data.detectMultiScale(grey_frame)
-        smile_coordinates = trained_smile_data.detectMultiScale(grey_frame,
-                                                                scaleFactor=1.7,
-                                                                minNeighbors=20)
+
         print(f"face_coordinates : {face_coordinates}")
-        print(f"smile coordinates {smile_coordinates}")
-        for coordinate in face_coordinates:
-            (x, y, w, h) = coordinate
+
+        for face_coordinate in face_coordinates:
+            (x, y, w, h) = face_coordinate
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 4)
-        for coordinate in smile_coordinates:
-            (x, y, w, h) = coordinate
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 4)
+
+            the_face = frame[y:y+h, x:x+w]
+            face_grey = cv2.cvtColor(the_face, cv2.COLOR_BGR2GRAY)
+            smile_coordinates = trained_smile_data.detectMultiScale(face_grey,
+                                                                    scaleFactor=1.7,
+                                                                    minNeighbors=20)
+
+            for (x_s, y_s, w_s, h_s) in smile_coordinates:
+                cv2.rectangle(the_face, (x_s, y_s), (x_s+w_s, x_s+h_s), (0, 0, 255), 2)
+
         cv2.imshow("", frame)
         key = cv2.waitKey(1)
 
