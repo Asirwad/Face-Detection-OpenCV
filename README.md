@@ -29,4 +29,15 @@ This web application captures video from your webcam and performs real-time face
 3. Install the required dependencies:
     ```bash
     pip install -r requirements.txt
-4. Explore the scripts
+    
+4. For CLI version
+   ```bash
+   python main_CLI.py
+
+5. For flask version
+   ```bash
+   python flask_main.py
+   ```
+   Then goto browser and open:
+   ```bash
+   http://127.0.0.1:5000/  
