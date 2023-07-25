@@ -15,6 +15,9 @@ A web application for real-time face detection using Flask and OpenCV.
 ## Introduction
 This web application captures video from your webcam and performs real-time face detection using the OpenCV library. It then displays the video feed with rectangles drawn around detected faces on a web page built with Flask.
 
+## Pre-trained-models
+This web application uses openCV pre-trained models [haarcascade_frontalface_default.xml](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml) for face detection and [haarcascade_smile.xml](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_smile.xml) for smile detection
+
 ## Installation
 1. Clone the repository:
    ```bash
