@@ -17,8 +17,8 @@ This web application captures video from your webcam and performs real-time face
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/face-detection-with-flask.git
-   cd face-detection-with-flask
+   git clone https://github.com/Asirwad/Face-Detection-OpenCV.git
+   cd Face-Detection-OpenCV
 
 2. Create and activate a virtual environment (optional but recommended):
     ```bash
