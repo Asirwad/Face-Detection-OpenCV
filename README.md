@@ -1,15 +1,16 @@
-# Face Detection with Flask
+<h1 align='center'>Face Detection using openCV</h1>
+
 
 ![Python](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-blue?logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-1.1.2-green?logo=flask&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.5.2.54-red?logo=opencv&logoColor=white)
+
 
 A web application for real-time face detection using Flask and OpenCV.
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Usage](#usage)
 
 ## Introduction
 This web application captures video from your webcam and performs real-time face detection using the OpenCV library. It then displays the video feed with rectangles drawn around detected faces on a web page built with Flask.
